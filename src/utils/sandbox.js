@@ -8,7 +8,7 @@
  * - Read/write scope limiting to ~/.agent-smith/
  */
 
-import { resolve, normalize, relative, join } from 'node:path';
+import { resolve, normalize, join, sep } from 'node:path';
 import { homedir } from 'node:os';
 import log from './logger.js';
 
@@ -32,8 +32,8 @@ export function validateSkillName(name) {
     return { valid: false, reason: 'Skill name exceeds 64 characters' };
   }
 
-  // Only allow safe characters: a-z, 0-9, -, _
-  if (!/^[a-z0-9][a-z0-9_-]*$/.test(name)) {
+  // Only allow safe characters: start with letter, then a-z, 0-9, -, _
+  if (!/^[a-z][a-z0-9_-]*$/.test(name)) {
     return { valid: false, reason: 'Skill name must start with a letter/number and contain only a-z, 0-9, hyphens, underscores' };
   }
 
@@ -65,7 +65,7 @@ export function safePath(baseDir, ...paths) {
 
   // Check if path is within allowed roots
   const isSafe = allowedRoots.some(root =>
-    normalized === root || normalized.startsWith(root + '/') || normalized.startsWith(root + '\\')
+    normalized === root || normalized.startsWith(root + sep)
   );
 
   if (!isSafe) {
