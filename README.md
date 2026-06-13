@@ -231,9 +231,32 @@ Agent Smith skills work with any AI agent:
 - **v1.0** — Stable API & plugin ecosystem
 - **v2.0** — Multi-agent orchestration
 
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [Getting Started](docs/GETTING_STARTED.md) | Installation & first steps |
+| [Architecture](docs/ARCHITECTURE.md) | Code structure & data flow |
+| [Security Model](SECURITY.md) | Sandbox, validation & error handling |
+| [Skill Format Spec](spec/SPEC.md) | Standard skill format |
+| [API Reference](docs/GETTING_STARTED.md) | All commands & options |
+
+## 🛡️ Security
+
+Agent Smith has a built-in security sandbox that:
+- Prevents **path traversal attacks** (`../../etc/passwd`)
+- Validates **skill names** (safe characters only)
+- Validates **versions** (strict SemVer)
+- Logs all operations for **audit trail**
+- Replaces `process.exit()` with **proper error handling**
+
+Details: [SECURITY.md](SECURITY.md)
+
 ## 🤝 Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+
+Before committing, tests are automatically run via **pre-commit hooks** (Husky).
 
 - **Found a bug?** [Open an issue](https://github.com/ebenhzr1/agent-smith/issues)
 - **Have an idea?** [Start a discussion](https://github.com/ebenhzr1/agent-smith/discussions)
@@ -241,7 +264,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 ## 📄 License
 
-[MIT](LICENSE) © [Eben Haezer](https://github.com/ebenhzr1)
+[MIT](LICENSE) © 2026 [Eben Haezer](https://github.com/ebenhzr1)
 
 ---
 
