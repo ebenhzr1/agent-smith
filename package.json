@@ -1,0 +1,55 @@
+{
+  "name": "@agent-smith/cli",
+  "version": "0.1.0",
+  "description": "Agent Smith — The universal package manager for AI agent skills. Install, search, and publish skills for Claude, GPT, Gemini, and any AI agent.",
+  "type": "module",
+  "bin": {
+    "agentsmith": "./bin/agentsmith.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "built-in-skills/",
+    "spec/"
+  ],
+  "scripts": {
+    "agentsmith": "node bin/agentsmith.js",
+    "test": "node --test src/**/*.test.js",
+    "build": "echo 'No build step needed — pure ESM'"
+  },
+  "keywords": [
+    "ai-agent",
+    "skills",
+    "package-manager",
+    "claude",
+    "gpt",
+    "agents",
+    "registry",
+    "agent-smith"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valentinovintages/agent-smith"
+  },
+  "bugs": {
+    "url": "https://github.com/valentinovintages/agent-smith/issues"
+  },
+  "homepage": "https://github.com/valentinovintages/agent-smith#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "conf": "^12.0.0",
+    "semver": "^7.6.0",
+    "nanospinner": "^1.1.0",
+    "chokidar": "^3.6.0"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/valentinovintages"
+  }
+}

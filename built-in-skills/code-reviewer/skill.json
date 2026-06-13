@@ -1,0 +1,15 @@
+{
+  "name": "code-reviewer",
+  "version": "1.0.0",
+  "description": "Five-axis code review with senior engineer standards",
+  "author": "agent-smith",
+  "license": "MIT",
+  "tags": ["engineering", "code-quality", "review"],
+  "keywords": ["code-review", "quality", "best-practices"],
+  "agent-smith": {
+    "minVersion": "0.1.0",
+    "platforms": ["claude", "openai", "gemini", "generic"],
+    "category": "engineering",
+    "icon": "🔍"
+  }
+}

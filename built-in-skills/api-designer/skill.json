@@ -1,0 +1,15 @@
+{
+  "name": "api-designer",
+  "version": "1.0.0",
+  "description": "Contract-first REST API design with best practices",
+  "author": "agent-smith",
+  "license": "MIT",
+  "tags": ["engineering", "api", "design"],
+  "keywords": ["api", "rest", "design", "openapi", "contract-first"],
+  "agent-smith": {
+    "minVersion": "0.1.0",
+    "platforms": ["claude", "openai", "gemini", "generic"],
+    "category": "engineering",
+    "icon": "🔌"
+  }
+}

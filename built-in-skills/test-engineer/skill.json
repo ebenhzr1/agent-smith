@@ -1,0 +1,15 @@
+{
+  "name": "test-engineer",
+  "version": "1.0.0",
+  "description": "Test-driven development with RED-GREEN-REFACTOR discipline",
+  "author": "agent-smith",
+  "license": "MIT",
+  "tags": ["testing", "tdd", "engineering"],
+  "keywords": ["testing", "tdd", "quality", "test-driven"],
+  "agent-smith": {
+    "minVersion": "0.1.0",
+    "platforms": ["claude", "openai", "gemini", "generic"],
+    "category": "engineering",
+    "icon": "🧪"
+  }
+}

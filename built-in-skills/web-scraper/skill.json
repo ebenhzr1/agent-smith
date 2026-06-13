@@ -1,0 +1,15 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "Web scraping and data extraction with anti-blocking best practices",
+  "author": "agent-smith",
+  "license": "MIT",
+  "tags": ["automation", "data", "web"],
+  "keywords": ["scraping", "crawling", "data-extraction", "automation"],
+  "agent-smith": {
+    "minVersion": "0.1.0",
+    "platforms": ["claude", "openai", "generic"],
+    "category": "automation",
+    "icon": "🕸️"
+  }
+}

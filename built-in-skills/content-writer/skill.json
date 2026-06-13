@@ -1,0 +1,15 @@
+{
+  "name": "content-writer",
+  "version": "1.0.0",
+  "description": "SEO-optimized content writing and copywriting workflows",
+  "author": "agent-smith",
+  "license": "MIT",
+  "tags": ["content", "writing", "marketing"],
+  "keywords": ["content", "writing", "seo", "copywriting", "marketing"],
+  "agent-smith": {
+    "minVersion": "0.1.0",
+    "platforms": ["claude", "openai", "gemini", "generic"],
+    "category": "marketing",
+    "icon": "✍️"
+  }
+}
