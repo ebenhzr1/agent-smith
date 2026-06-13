@@ -15,7 +15,7 @@ const BUILT_IN_SKILLS = [
       platforms: ['claude', 'openai', 'generic'],
       category: 'engineering',
     },
-    repository: 'https://github.com/valentinovintages/agent-smith/tree/main/built-in-skills/code-reviewer',
+    repository: 'https://github.com/ebenhzr1/agent-smith/tree/main/built-in-skills/code-reviewer',
   },
   {
     name: 'test-engineer',
@@ -30,7 +30,7 @@ const BUILT_IN_SKILLS = [
       platforms: ['claude', 'openai', 'generic'],
       category: 'engineering',
     },
-    repository: 'https://github.com/valentinovintages/agent-smith/tree/main/built-in-skills/test-engineer',
+    repository: 'https://github.com/ebenhzr1/agent-smith/tree/main/built-in-skills/test-engineer',
   },
   {
     name: 'web-scraper',
@@ -45,7 +45,7 @@ const BUILT_IN_SKILLS = [
       platforms: ['claude', 'openai', 'generic'],
       category: 'automation',
     },
-    repository: 'https://github.com/valentinovintages/agent-smith/tree/main/built-in-skills/web-scraper',
+    repository: 'https://github.com/ebenhzr1/agent-smith/tree/main/built-in-skills/web-scraper',
   },
   {
     name: 'api-designer',
@@ -60,7 +60,7 @@ const BUILT_IN_SKILLS = [
       platforms: ['claude', 'openai', 'generic'],
       category: 'engineering',
     },
-    repository: 'https://github.com/valentinovintages/agent-smith/tree/main/built-in-skills/api-designer',
+    repository: 'https://github.com/ebenhzr1/agent-smith/tree/main/built-in-skills/api-designer',
   },
   {
     name: 'content-writer',
@@ -75,7 +75,7 @@ const BUILT_IN_SKILLS = [
       platforms: ['claude', 'openai', 'generic'],
       category: 'marketing',
     },
-    repository: 'https://github.com/valentinovintages/agent-smith/tree/main/built-in-skills/content-writer',
+    repository: 'https://github.com/ebenhzr1/agent-smith/tree/main/built-in-skills/content-writer',
   },
 ];
 

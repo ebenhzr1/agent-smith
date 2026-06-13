@@ -37,7 +37,7 @@ export function getConfig() {
   ensureDir();
   if (!existsSync(CONFIG_FILE)) {
     const defaultConfig = {
-      registry: 'https://raw.githubusercontent.com/valentinovintages/agent-smith-registry/main/registry.json',
+      registry: 'https://raw.githubusercontent.com/ebenhzr1/agent-smith-registry/main/registry.json',
       installDir: SKILLS_DIR,
       autoUpdate: false,
     };

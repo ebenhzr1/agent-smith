@@ -123,6 +123,6 @@ agentsmith doctor
 
 ## Next Steps
 
-- [Browse available skills](https://github.com/valentinovintages/agent-smith-registry)
+- [Browse available skills](https://github.com/ebenhzr1/agent-smith-registry)
 - [Create your own skill](../spec/SPEC.md)
 - [Contribute](../CONTRIBUTING.md)

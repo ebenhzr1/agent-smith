@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 
 export default async function browseHandler(options = {}) {
-  const registryUrl = 'https://github.com/valentinovintages/agent-smith-registry';
+  const registryUrl = 'https://github.com/ebenhzr1/agent-smith-registry';
 
   console.log(chalk.bold('\n  🏪  Agent Smith Registry\n'));
   console.log(chalk.dim(`  Browse all available skills at:\n`));

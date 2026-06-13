@@ -30,12 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/valentinovintages/agent-smith"
+    "url": "https://github.com/ebenhzr1/agent-smith"
   },
   "bugs": {
-    "url": "https://github.com/valentinovintages/agent-smith/issues"
+    "url": "https://github.com/ebenhzr1/agent-smith/issues"
   },
-  "homepage": "https://github.com/valentinovintages/agent-smith#readme",
+  "homepage": "https://github.com/ebenhzr1/agent-smith#readme",
   "engines": {
     "node": ">=18"
   },
@@ -50,6 +50,6 @@
   },
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/valentinovintages"
+    "url": "https://github.com/sponsors/ebenhzr1"
   }
 }

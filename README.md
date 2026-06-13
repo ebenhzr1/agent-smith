@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/valentinovintages/agent-smith/main/docs/agent-smith-banner.svg" alt="Agent Smith Banner" width="700">
+  <img src="https://raw.githubusercontent.com/ebenhzr1/agent-smith/main/docs/agent-smith-banner.svg" alt="Agent Smith Banner" width="700">
 
   <h1>⚡ Agent Smith</h1>
   <h3><i>"The universal package manager for AI agent skills"</i></h3>
@@ -16,7 +16,7 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/github/stars/valentinovintages/agent-smith?style=flat&logo=github" alt="Stars">
+    <img src="https://img.shields.io/github/stars/ebenhzr1/agent-smith?style=flat&logo=github" alt="Stars">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
     <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen" alt="Node">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome">
