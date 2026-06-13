@@ -16,10 +16,15 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/github/stars/ebenhzr1/agent-smith?style=flat&logo=github" alt="Stars">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-    <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen" alt="Node">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome">
+    <a href="https://github.com/ebenhzr1/agent-smith/stargazers"><img src="https://img.shields.io/github/stars/ebenhzr1/agent-smith?style=for-the-badge&logo=github&color=yellow" alt="GitHub stars"></a>
+    <a href="https://github.com/ebenhzr1/agent-smith/network/members"><img src="https://img.shields.io/github/forks/ebenhzr1/agent-smith?style=for-the-badge&logo=github&color=blue" alt="GitHub forks"></a>
+    <a href="https://github.com/ebenhzr1/agent-smith/issues"><img src="https://img.shields.io/github/issues/ebenhzr1/agent-smith?style=for-the-badge&logo=github&color=red" alt="GitHub issues"></a>
+    <a href="https://github.com/ebenhzr1/agent-smith/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ebenhzr1/agent-smith?style=for-the-badge&color=green" alt="License"></a>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen?style=for-the-badge&logo=node.js" alt="Node">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" alt="PRs Welcome">
+    <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" alt="Version">
   </p>
 </div>
 
@@ -29,22 +34,19 @@
 
 Every AI coding agent has skills — workflows, prompts, and tools that make them useful. But installing, managing, and discovering these skills is a **mess**:
 
-```bash
-# 😫 Current reality:
-# Clone 5 different repos
-# Find the right SKILL.md manually
-# Copy files to the right directory
-# No version management
-# No dependency checking
-# No search or discovery
-
-# ✨ Agent Smith:
-agentsmith install code-reviewer
-agentsmith install test-engineer@1.0.0
-agentsmith search "web scraping"
-```
-
 **Agent Smith** is the **npm for AI agent skills** — a universal registry and CLI that makes installing, publishing, and discovering skills as easy as `npm install`.
+
+```bash
+# 🔴 BEFORE — Agent Smith:
+#   ❌ Clone 5 repos manually
+#   ❌ Hunt for SKILL.md files
+#   ❌ No version management
+#   ❌ No dependency tracking
+
+# ✅ AFTER — Agent Smith:
+npm install -g @agent-smith/cli
+agentsmith install code-reviewer
+agentsmith search "web scraping"
 
 ## ✨ Features
 
@@ -58,6 +60,31 @@ agentsmith search "web scraping"
 | 🩺 **Doctor** | Diagnose installation and configuration issues |
 | 🏗️ **Init** | Scaffold new skills with the standard format |
 | 🔌 **Cross-platform** | Skills work with Claude, GPT, Gemini, and more |
+
+## 🎬 Demo
+
+```bash
+# Search for skills
+$ agentsmith search "code review"
+  🔍  Searching for "code review"...
+   1. code-reviewer  v1.0.0  ★
+      Five-axis code review with senior engineer standards
+      #engineering #code-quality #review
+      by agent-smith
+
+# Install a skill
+$ agentsmith install code-reviewer
+  ✔ Installed code-reviewer@1.0.0
+
+# See what you've got
+$ agentsmith list
+  📦  Installed Skills (1)
+  ┌───────────────┬─────────┬──────────────┬─────────────┐
+  │ Name          │ Version │ Category     │ Author      │
+  ├───────────────┼─────────┼──────────────┼─────────────┤
+  │ code-reviewer │ v1.0.0  │ engineering  │ agent-smith │
+  └───────────────┴─────────┴──────────────┴─────────────┘
+```
 
 ## 🚀 Quick Start
 
