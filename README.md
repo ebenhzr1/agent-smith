@@ -214,7 +214,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 ## 📄 License
 
-MIT © [Valentino Vintages](https://github.com/valentinovintages)
+[MIT](LICENSE) © [Eben Haezer](https://github.com/ebenhzr1)
 
 ---
 
@@ -223,7 +223,11 @@ MIT © [Valentino Vintages](https://github.com/valentinovintages)
   <p>
     <a href="https://github.com/ebenhzr1/agent-smith">GitHub</a> ·
     <a href="https://github.com/ebenhzr1/agent-smith/issues">Issues</a> ·
-    <a href="https://github.com/ebenhzr1/agent-smith/discussions">Discussions</a>
+    <a href="https://github.com/ebenhzr1/agent-smith/discussions">Discussions</a> ·
+    <a href="https://www.linkedin.com/in/ebenhzrvlt/">LinkedIn</a>
+  </p>
+  <p>
+    <sub>Created by <a href="https://www.linkedin.com/in/ebenhzrvlt/">Eben Haezer</a></sub>
   </p>
 </div>
 
