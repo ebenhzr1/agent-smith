@@ -1,36 +1,48 @@
 import chalk from 'chalk';
 import { getRegistry } from '../lib/registry.js';
+import { errorHandler } from '../utils/errors.js';
+import { sanitizeInput } from '../utils/sandbox.js';
+import log from '../utils/logger.js';
 
 export default async function searchHandler(query, options = {}) {
-  const registry = await getRegistry();
+  return await errorHandler('search', async () => {
+    const cleanQuery = sanitizeInput(query);
 
-  console.log(chalk.bold(`\n  🔍  Searching for "${chalk.cyan(query)}"...\n`));
+    log.info('Search', { query: cleanQuery, tag: options.tag });
 
-  const results = registry.search(query, options.tag);
+    console.log(chalk.bold(`\n  🔍  Searching for "${chalk.cyan(cleanQuery)}"...\n`));
 
-  if (results.length === 0) {
-    console.log(chalk.yellow('  No skills found. Try a different query.'));
-    console.log(chalk.dim('  Pro-tip: Use `agentsmith browse` to see all available skills\n'));
-    return;
-  }
+    const registry = await getRegistry();
+    const results = registry.search(cleanQuery, options.tag);
 
-  if (options.json) {
-    console.log(JSON.stringify(results, null, 2));
-    return;
-  }
+    if (results.length === 0) {
+      console.log(chalk.yellow('  No skills found. Try a different query.'));
+      console.log(chalk.dim('  💡  Try one of these:'));
+      console.log(chalk.dim('    agentsmith search "code"'));
+      console.log(chalk.dim('    agentsmith search "testing"'));
+      console.log(chalk.dim('    agentsmith search "web"'));
+      console.log(chalk.dim('    agentsmith browse\n'));
+      return;
+    }
 
-  results.forEach((skill, i) => {
-    const idx = String(i + 1).padStart(2, ' ');
-    const tags = (skill.tags || []).map(t => chalk.dim(`#${t}`)).join(' ');
-    const version = chalk.green(`v${skill.version}`);
-    const stars = skill.stars ? chalk.yellow(`★ ${skill.stars}`) : '';
+    if (options.json) {
+      console.log(JSON.stringify(results, null, 2));
+      return;
+    }
 
-    console.log(`  ${idx}. ${chalk.bold(skill.name)}  ${version}  ${stars}`);
-    if (skill.description) console.log(`      ${chalk.dim(skill.description)}`);
-    if (tags) console.log(`      ${tags}`);
-    if (skill.author) console.log(`      ${chalk.dim('by')} ${skill.author}`);
-    console.log();
+    for (const [i, skill] of results.entries()) {
+      const idx = String(i + 1).padStart(2, ' ');
+      const tags = (skill.tags || []).map(t => chalk.dim(`#${t}`)).join(' ');
+      const version = chalk.green(`v${skill.version}`);
+      const stars = skill.stars ? chalk.yellow(`★ ${skill.stars}`) : '';
+
+      console.log(`  ${idx}. ${chalk.bold(skill.name)}  ${version}  ${stars}`);
+      console.log(`      ${chalk.dim(skill.description)}`);
+      if (tags) console.log(`      ${tags}`);
+      if (skill.author) console.log(`      ${chalk.dim('by')} ${skill.author}`);
+      console.log();
+    }
+
+    console.log(chalk.dim(`  📊  ${results.length} skill(s) found\n`));
   });
-
-  console.log(chalk.dim(`  📊  ${results.length} skill(s) found\n`));
 }

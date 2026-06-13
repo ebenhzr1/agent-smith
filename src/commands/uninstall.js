@@ -3,11 +3,24 @@ import { rmSync, existsSync } from 'fs';
 import { join } from 'path';
 import { AGENT_SMITH_DIR, getLocalSkills, saveLocalSkills } from '../lib/storage.js';
 import { createSpinner } from 'nanospinner';
+import { errorHandler } from '../utils/errors.js';
+import { validateSkillName, safePath } from '../utils/sandbox.js';
+import log from '../utils/logger.js';
 
 export default async function uninstallHandler(skillName) {
-  const spinner = createSpinner(`Uninstalling ${chalk.cyan(skillName)}...`).start();
+  return await errorHandler('uninstall', async () => {
+    // Validate skill name
+    const nameCheck = validateSkillName(skillName);
+    if (!nameCheck.valid) {
+      console.log(chalk.red(`\n  ✗  ${nameCheck.reason}\n`));
+      return;
+    }
 
-  try {
+    log.info('Uninstalling skill', { name: skillName });
+
+    const spinner = createSpinner(`Uninstalling ${chalk.cyan(skillName)}...`).start();
+
+    // Verify it's installed
     const localSkills = getLocalSkills();
     const idx = localSkills.findIndex(s => s.name === skillName);
 
@@ -16,10 +29,18 @@ export default async function uninstallHandler(skillName) {
       return;
     }
 
-    // Remove directory
-    const skillDir = join(AGENT_SMITH_DIR, 'skills', skillName);
-    if (existsSync(skillDir)) {
-      rmSync(skillDir, { recursive: true, force: true });
+    // Use safe path for deletion
+    const safe = safePath(AGENT_SMITH_DIR, 'skills', skillName);
+    if (!safe) {
+      spinner.error({ text: chalk.red('Security error: invalid path') });
+      log.error('Path traversal blocked during uninstall', { skillName });
+      return;
+    }
+
+    // Remove directory safely
+    if (existsSync(safe)) {
+      rmSync(safe, { recursive: true, force: true });
+      log.info('Skill directory removed', { path: safe });
     }
 
     // Remove from local registry
@@ -27,9 +48,6 @@ export default async function uninstallHandler(skillName) {
     saveLocalSkills(localSkills);
 
     spinner.success({ text: chalk.green(`✓ Uninstalled ${chalk.bold(skillName)}`) });
-
-  } catch (error) {
-    spinner.error({ text: chalk.red(`Failed to uninstall ${skillName}: ${error.message}`) });
-    process.exit(1);
-  }
+    log.info('Skill uninstalled', { name: skillName });
+  });
 }

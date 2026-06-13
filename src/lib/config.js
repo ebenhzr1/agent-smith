@@ -1,4 +1,4 @@
-import { getConfig } from './storage.js';
+import { getConfig, saveConfig } from './storage.js';
 
 export function getDefaultRegistryUrl() {
   const config = getConfig();
