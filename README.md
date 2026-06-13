@@ -208,9 +208,9 @@ Agent Smith skills work with any AI agent:
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
-- **Found a bug?** [Open an issue](https://github.com/valentinovintages/agent-smith/issues)
-- **Have an idea?** [Start a discussion](https://github.com/valentinovintages/agent-smith/discussions)
-- **Want to contribute a skill?** [Submit a PR](https://github.com/valentinovintages/agent-smith/pulls)
+- **Found a bug?** [Open an issue](https://github.com/ebenhzr1/agent-smith/issues)
+- **Have an idea?** [Start a discussion](https://github.com/ebenhzr1/agent-smith/discussions)
+- **Want to contribute a skill?** [Submit a PR](https://github.com/ebenhzr1/agent-smith/pulls)
 
 ## 📄 License
 
@@ -221,9 +221,9 @@ MIT © [Valentino Vintages](https://github.com/valentinovintages)
 <div align="center">
   <p>Built with ❤️ for the AI agent community</p>
   <p>
-    <a href="https://github.com/valentinovintages/agent-smith">GitHub</a> ·
-    <a href="https://github.com/valentinovintages/agent-smith/issues">Issues</a> ·
-    <a href="https://github.com/valentinovintages/agent-smith/discussions">Discussions</a>
+    <a href="https://github.com/ebenhzr1/agent-smith">GitHub</a> ·
+    <a href="https://github.com/ebenhzr1/agent-smith/issues">Issues</a> ·
+    <a href="https://github.com/ebenhzr1/agent-smith/discussions">Discussions</a>
   </p>
 </div>
 
